@@ -12,14 +12,21 @@
 <body>
 
   <h1>Anh có điều muốn nói</h1>
-  <button onclick="generateRandomNotifications()">Nhấn vào đây nè</button>
+  <!-- Dòng chữ mà người dùng sẽ nhấn để phát nhạc -->
+  <p onclick="playMusic()">Nhấn vào đây nè</p>
 
-  <audio autoplay loop>
+  <!-- Nhạc -->
+  <audio id="music" loop>
     <source src="nhoem.mp3" type="audio/mpeg">
     Trình duyệt của bạn không hỗ trợ phát nhạc.
   </audio>
 
-  <script src="./script.js"></script>
+  <script>
+    function playMusic() {
+      var music = document.getElementById('music');
+      music.play(); // Phát nhạc khi nhấn vào dòng chữ
+    }
+  </script>
 
 </body>
 
